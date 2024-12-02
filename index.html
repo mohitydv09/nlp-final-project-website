@@ -58,7 +58,7 @@
               <span class="author-block">
                 <a href="https://mohitydv09.github.io" target="_blank">Mohit Yadav</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Alex Besh</a>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Alex Besch</a>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Abbas Booshehrain</a>
                   </span>
@@ -73,7 +73,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://github.com/mohitydv09/nlp-final-project/blob/main/project-proposal.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -133,7 +133,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Hello this is our website for the Final Project of NLP.
+        Model output in navigation mode.
       </h2>
     </div>
   </div>
@@ -162,10 +162,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Motivation</h2>
+        <h2 class="title is-3">Problem Definition</h2>
         <div class="content has-text-justified">
           <p>
-            We explore the cognitive capabilities of large language models (LLMs) to reason about a scene based solely on knowledge of relevant objects and their spatial positions. We designed a specialized module that leverages these capabilities to assist visually impaired individuals in navigating and interpreting their environments.
+            We formalize our problem statement as: “Given a stream of RGB-D video, how can we process this information using an LLM to generate coherent language output that informs a visually impaired person about their surroundings?”
           </p>
         </div>
       </div>
@@ -174,6 +174,22 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Proposed Idea</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our methodology uses an object detector to first identify and localize objects in the scene. These detections are then paired with depth information and provided to the LLM for reasoning. This approach allows the LLM to incorporate temporal data, enabling better understanding of the scene. Also, as object detectors are computationally lighter than VLMs, our method is less resource intensive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -184,7 +200,7 @@
         <!-- Your image here -->
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Information flow for navigation module of our system.
         </h2>
       </div>
       <div class="item">
@@ -194,85 +210,82 @@
           Second image description.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experimental Results and Comparison</h2>
+        <div class="content has-text-justified">
+          <p>
+            A quantitative comparison with a baseline VLM will be included in the final report.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Main Findings</h2>
+        <div class="content has-text-justified">
+          <p>
+            In our qualitative tests, we found that the LLM demonstrates strong coherence in reasoning about the relevant objects, based on their location and object labels. Additionally, we observed that textual information, rather than numerical data, aids the model in better understanding the scene.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Limitations and Discussion</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method relies on object detection and depth information from the camera, which may not always be accurate. While the approach shows promising results, there is significant potential for improvement in the system design to better leverage the capabilities of the LLM. For instance, incorporating IMU data could help the system better reason about the user's movements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
 
 
 
@@ -291,11 +304,24 @@
 <!--End paper poster -->
 
 
-<!--BibTex citation -->
+<!--Reference citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <h2 class="title">References</h2>
+      <div class="content has-text-justified">
+        <p>
+          1. Hong, Y., Zhen, H., Chen, P., Zheng, S., Du, Y., Chen, Z., & Gan, C. (2023). 3D-LLM: Injecting the 3D World into Large Language Models. arXiv. https://arxiv.org/abs/2307.12981
+        </p>
+        <p>
+          2. Li, J., Li, D., Xiong, C., & Hoi, S. (2022). BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation. arXiv. https://arxiv.org/abs/2201.12086
+        </p>
+        <p>
+          3. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning Transferable Visual Models From Natural Language Supervision. arXiv. https://arxiv.org/abs/2103.00020
+        </p>
+        <p>
+          4. Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You Only Look Once: Unified, Real-Time Object Detection. arXiv. https://arxiv.org/abs/1506.02640
+        </p>
+      </div>
     </div>
 </section>
 <!--End BibTex citation -->
