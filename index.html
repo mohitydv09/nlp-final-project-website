@@ -73,7 +73,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://github.com/mohitydv09/nlp-final-project/blob/main/project-proposal.pdf" target="_blank"
+                        <a href="https://drive.google.com/file/d/1TtWivraFf1cAHTTH5KVR7AnczFDtxEUw/view?usp=sharing" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -369,12 +369,16 @@
           </table>
           <h3>Net Preference Score</h3>
           <p>
-            Method 1: <strong>+47.83%</strong><br>
-            Method 2: <strong>-67.39%</strong>
+            Method 1: <strong>+81.4%</strong><br>
           </p>
           <p>
-            Based on the results, <strong>Method 1 emerged as the clear winner</strong>, with higher ratings and a net positive preference score.
+            Based on the results, <strong>Method 1</strong> was stronly preferred, with higher average ratings and a net positive preference score.
           </p>
+          <h3>Visual Summary</h3>
+          <figure>
+            <img src="static/images/result_bar.png" alt="Bar graph showing results comparison" class="image">
+            <figcaption>Bar graph summarizing the comparative results of Method 1 and Method 2.</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -392,6 +396,24 @@
           <p>
             In our qualitative tests, we found that the LLM demonstrates strong coherence in reasoning about the relevant objects, based on their location and object labels. Additionally, we observed that textual information, rather than numerical data, aids the model in better understanding the scene.
           </p>
+          <h3>Potential for Publication</h3>
+          <p>
+            This project introduces a novel method combining depth data with language models to assist visually impaired individuals. 
+            While promising, challenges like limited replicability, proprietary models, and a small evaluation sample (22 data points) 
+            need to be addressed. Expanding testing and exploring open-source alternatives could strengthen its publication potential.
+          </p>
+          <h3>Potential Impact</h3>
+          <p>
+            The system leverages deep learning and Vision-Language Models to enhance navigation for visually impaired individuals by 
+            integrating RGB and depth data for accurate distance perception. This technology could greatly benefit users, assistive 
+            tech companies, and researchers, advancing independence and safety.
+          </p>
+          <h3>Replicability</h3>
+          <p>
+            Challenges in replicating this work include reliance on proprietary models, custom datasets, and specialized hardware (Intel 
+            RealSense Lidar Camera L515). The complex pipeline, involving parallel object detection, localization, and language inference, 
+            also limits replicability.
+          </p>
         </div>
       </div>
     </div>
@@ -406,8 +428,21 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Limitations and Discussion</h2>
         <div class="content has-text-justified">
+          <p><strong>Key limitations include:</strong></p>
+          <ul>
+            <li><strong>Object Detection Challenges:</strong> The pre-trained YOLO model used is limited to 80 classes and occasionally produces inaccurate labels, an inherent limitation of current computer vision models.</li>
+            <li><strong>Hardware Constraints:</strong> The Intel LiDAR camera is suitable only for indoor use and objects within 9 meters, restricting system applicability.</li>
+            <li><strong>Inference Timing:</strong> Fixed time windows for LLM responses limited flexibility. Dynamic, context-aware inferences could improve the system's responsiveness.</li>
+            <li><strong>Scalability:</strong> While we developed three functional modules, expanding these and integrating them with an intent-recognizing LLM could significantly enhance the system.</li>
+          </ul>
+          <p>
+            Future work will focus on addressing these limitations and broadening the system's capabilities.
+          </p>
           <p>
             Our method relies on object detection and depth information from the camera, which may not always be accurate. While the approach shows promising results, there is significant potential for improvement in the system design to better leverage the capabilities of the LLM. For instance, incorporating IMU data could help the system better reason about the user's movements.
+          </p>
+          <p>
+            Our system demonstrated clear improvements over using a Vision-Language Model (VLM) for navigation tasks, showcasing potential for enhanced performance. However, its overall utility remains inconclusive due to a limited dataset and the absence of evaluations with visually impaired users.
           </p>
         </div>
       </div>
