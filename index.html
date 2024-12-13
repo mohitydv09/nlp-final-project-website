@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">LLMs as Assistive Visual Information Parsers for the Visually Impaired</h1>
+            <h1 class="title is-1 publication-title">Scene Descriptions for the Visually Impaired</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -73,7 +73,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://drive.google.com/file/d/1TtWivraFf1cAHTTH5KVR7AnczFDtxEUw/view?usp=sharing" target="_blank"
+                        <a href="static/pdfs/report.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -103,17 +103,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
             </div>
           </div>
         </div>
@@ -273,17 +262,23 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Experimental Results and Comparison</h2>
+        <h2 class="title is-3">Evaluation and Results</h2>
         <div class="content has-text-justified">
           <p>
+            To evaluate our model, we opted for a human evaluation as it appeared to be the most suitable approach, given the absence of ground truth data for our work. For comparison, we used vision-anguage models (VLMs) as baselines, as they are the closest to our intended methodology.
+            
             To assess the effectiveness of different methods, a Vision-Language Model (VLM) served as the control, 
             while the experimental variable was a navigation module integrated into the system. A comparative survey 
             was conducted to gather user preferences and feedback.
           </p>
           <p>
-            Participants reviewed two videos, each displaying side-by-side responses from the VLM and the navigation module. 
-            They were asked to select their preferred response as a navigation agent and to rate the usefulness of each model 
-            on a scale of 1 to 5. A sample of the survey can be found <a href="https://forms.gle/QK8QY26M6a9SspZx8" target="_blank">Here.</a>
+            We conducted a comparative survey to gather user feedback. Participants reviewed two sample videos, each displaying side-by-side responses from the baseline VLM and the our method. 
+            We gathered data on two aspects: 
+            <ol> 
+              <li> a preference comparison between our method and the VLM baseline, and </li>
+              <li> the perceived usefulness of the methods on a scale of 1–5. </li>
+            </ol>
+            The form used to collected data can be found on the link : <a href="https://forms.gle/QK8QY26M6a9SspZx8" style="color: blue; text-decoration: underline;">Link to Google Form</a>
           </p>
           <p>
             The results provided insights into user preferences and the perceived utility of each approach. Detailed findings 
@@ -301,42 +296,51 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Summary of Results</h2>
         <div class="content has-text-justified">
           <h3>Preference Comparison</h3>
-          <table class="table is-bordered is-striped is-fullwidth">
+          <table class="table is-bordered is-striped is-fullwidth" style="text-align: center">
             <thead>
               <tr>
                 <th>Preference</th>
-                <th>Method 1</th>
-                <th>Method 2</th>
+                <th>Ours</th>
+                <th>Baseline</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Percent Responses (1-2 Rating)</td>
-                <td>17.39%</td>
-                <td>71.74%</td>
+                <td>Sample 1</td>
+                <td>21/22</td>
+                <td>1/22</td>
               </tr>
               <tr>
-                <td>Percent Responses (3 Rating)</td>
-                <td>17.39%</td>
-                <td>23.91%</td>
+                <td>Sample 2</td>
+                <td>18/21</td>
+                <td>3/21</td>
               </tr>
               <tr>
-                <td>Percent Responses (4-5 Rating)</td>
-                <td>65.22%</td>
-                <td>4.35%</td>
+                <td>Total</td>
+                <td>39/43</td>
+                <td>4/43</td>
               </tr>
             </tbody>
           </table>
+          <h3>Net Preference Score</h3>
+          Based on user preference data we calculated the net preference score as:
+          <p>
+            Net Preference Score = (Preference for Ours - Preference for Baseline) / Total Responses
+          </p>
+          Based on the 43 responses, the net preference score for our method was: <strong>81.4%</strong>
+
           <h3>Rating Metrics</h3>
-          <table class="table is-bordered is-striped is-fullwidth">
+          <p>
+            We also collected ratings on a scale of 1–5 for the perceived usefulness of each method. The results from which are summarized below:
+          </p>
+          <table class="table is-bordered is-striped is-fullwidth" style="text-align: center;">
             <thead>
               <tr>
                 <th>Metric</th>
-                <th>Method 1</th>
-                <th>Method 2</th>
+                <th>Ours</th>
+                <th>Baseline</th>
               </tr>
             </thead>
             <tbody>
@@ -351,125 +355,27 @@
                 <td>1.00</td>
               </tr>
               <tr>
-                <td>Minimum</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td>Maximum</td>
-                <td>5</td>
-                <td>5</td>
-              </tr>
-              <tr>
                 <td>Median</td>
                 <td>4</td>
                 <td>2</td>
               </tr>
             </tbody>
           </table>
-          <h3>Net Preference Score</h3>
-          <p>
-            Method 1: <strong>+81.4%</strong><br>
-          </p>
-          <p>
-            Based on the results, <strong>Method 1</strong> was stronly preferred, with higher average ratings and a net positive preference score.
-          </p>
-          <h3>Visual Summary</h3>
+          <p> The score for both the methods are shown in the bar graph below.</p>
           <figure>
             <img src="static/images/result_bar.png" alt="Bar graph showing results comparison" class="image">
-            <figcaption>Bar graph summarizing the comparative results of Method 1 and Method 2.</figcaption>
+            <figcaption>Bar graph summarizing the comparative results of Our method and the baseline(VLM).</figcaption>
           </figure>
+
+          <h2>Conclusion</h2>
+          <p>
+            In this work, we explored the use of large language models as cognitive filters and parsers of depth and visual information for the specific use case of assisting visually impaired individuals. The results demonstrate that the concept is feasible and warrants further exploration with enhanced hardware and resources. Due to time and resource constraints, we tested the method in a limited number of scenarios. However, with additional results and fine-tuning using reward-based methods, we anticipate significant improvements in the system.
+          </p>  
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Main Findings</h2>
-        <div class="content has-text-justified">
-          <p>
-            In our qualitative tests, we found that the LLM demonstrates strong coherence in reasoning about the relevant objects, based on their location and object labels. Additionally, we observed that textual information, rather than numerical data, aids the model in better understanding the scene.
-          </p>
-          <h3>Potential for Publication</h3>
-          <p>
-            This project introduces a novel method combining depth data with language models to assist visually impaired individuals. 
-            While promising, challenges like limited replicability, proprietary models, and a small evaluation sample (22 data points) 
-            need to be addressed. Expanding testing and exploring open-source alternatives could strengthen its publication potential.
-          </p>
-          <h3>Potential Impact</h3>
-          <p>
-            The system leverages deep learning and Vision-Language Models to enhance navigation for visually impaired individuals by 
-            integrating RGB and depth data for accurate distance perception. This technology could greatly benefit users, assistive 
-            tech companies, and researchers, advancing independence and safety.
-          </p>
-          <h3>Replicability</h3>
-          <p>
-            Challenges in replicating this work include reliance on proprietary models, custom datasets, and specialized hardware (Intel 
-            RealSense Lidar Camera L515). The complex pipeline, involving parallel object detection, localization, and language inference, 
-            also limits replicability.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Limitations and Discussion</h2>
-        <div class="content has-text-justified">
-          <p><strong>Key limitations include:</strong></p>
-          <ul>
-            <li><strong>Object Detection Challenges:</strong> The pre-trained YOLO model used is limited to 80 classes and occasionally produces inaccurate labels, an inherent limitation of current computer vision models.</li>
-            <li><strong>Hardware Constraints:</strong> The Intel LiDAR camera is suitable only for indoor use and objects within 9 meters, restricting system applicability.</li>
-            <li><strong>Inference Timing:</strong> Fixed time windows for LLM responses limited flexibility. Dynamic, context-aware inferences could improve the system's responsiveness.</li>
-            <li><strong>Scalability:</strong> While we developed three functional modules, expanding these and integrating them with an intent-recognizing LLM could significantly enhance the system.</li>
-          </ul>
-          <p>
-            Future work will focus on addressing these limitations and broadening the system's capabilities.
-          </p>
-          <p>
-            Our method relies on object detection and depth information from the camera, which may not always be accurate. While the approach shows promising results, there is significant potential for improvement in the system design to better leverage the capabilities of the LLM. For instance, incorporating IMU data could help the system better reason about the user's movements.
-          </p>
-          <p>
-            Our system demonstrated clear improvements over using a Vision-Language Model (VLM) for navigation tasks, showcasing potential for enhanced performance. However, its overall utility remains inconclusive due to a limited dataset and the absence of evaluations with visually impaired users.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
 
 
 
